@@ -21,7 +21,8 @@ class ChatController extends ChangeNotifier {
       final answer = await repository.ask(text, messages);
       messages.add(Message(role: 'assistant', content: answer));
     } catch (e) {
-      error = "Error de conexión con el servidor";
+      error = "Error de conexión con el servidor :c, Vuelve a intertarlo en unos minutos :)";
+      messages.add(Message(role: 'assistant', content: error??"Ocurrio un error"));
     } finally {
       loading = false;
       notifyListeners();

@@ -6,7 +6,7 @@ import 'features/chat/chat_controller.dart';
 import 'features/chat/chat_screen.dart';
 
 void main() {
-  final client = ApiClient('http://localhost:8000/'); 
+  final client = ApiClient('http://desarrollosdelcaribe.homelinux.com:27017/'); 
   final repository = ChatRepository(client);
 
   runApp(MyApp(repository: repository));
